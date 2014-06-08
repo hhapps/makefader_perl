@@ -73,6 +73,10 @@ elsif($direction eq 'vertical'){
 	}
 	$dst_width = $button->Get('width');
 }
+else
+{
+	die('Illegal direction specified');
+}
 
 $command .= $dst_width.'x'.$dst_height. ' xc:transparent '.$options.' '.$image_dst_file;
 
