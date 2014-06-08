@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Makefader perl : Create a fader image animation." />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Makefader perl</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/hhapps/makefader_perl">View on GitHub</a>
+
+          <h1 id="project_title">Makefader perl</h1>
+          <h2 id="project_tagline">Create a fader image animation.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/hhapps/makefader_perl/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/hhapps/makefader_perl/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <p>This is just a really simple script that allows quick and easy generation of images that may be used for horizontal or vertical faders in other applications, such as Audio Unit or VST plugins. We're currently using it for generating the faders to be used in our upcoming sampler sound library for Native Instruments Kontakt.</p>
+
+<p>It's a perl script, and it's using the ImageMagick PerlMagick library as well as the actual ImageMagick command line interface. So, it requires that you have ImageMagick and the Image::Magick.pm module for perl installed.</p>
+
+<p>Once this is set up, add execution permissions to the script file, and run it like this:</p>
+
+<pre><code>makefader.pl inputfile outputfile stepcount direction width_or_height
+</code></pre>
+
+<p>where:</p>
+
+<ul>
+<li>inputfile: button source filename (this is the moving part of the fader. It should reside on your computer)</li>
+<li>outputfile: destination filename. Folders in path are required to exist</li>
+<li>stepcount: granularity of the fader movement</li>
+<li>direction: horizontal or vertical</li>
+<li>size: desired width (for horizontal fader) or height (for vertical fader) in pixel</li>
+</ul><p>The script will now generate an image file according to outputfile. The generated image will consist of stepcount images appended below each other with the inputfile moving a small step across the canvas, a little more for each iteration. Try it out, and you'll see :)</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Makefader perl maintained by <a href="https://github.com/hhapps">hhapps</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
